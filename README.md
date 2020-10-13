@@ -10,7 +10,7 @@ Oauth2资源服务器端sdk，授权码模式认证。功能包括：
 + 优雅的封装用户信息并提交给控制器处理
 
 # 授权码模式认证流程
-![流程图](https://github.com/handsomestWei/oauth2-res-sdk/blob/main/design/Oauth2-AuthorizationCode-Flow.png)
+![流程图](<div align=center><img width="399" height="502" src="https://github.com/handsomestWei/oauth2-res-sdk/blob/main/design/Oauth2-AuthorizationCode-Flow.png"/></div>)
 
 # Usage
 
