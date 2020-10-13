@@ -9,6 +9,9 @@ Oauth2资源服务器端sdk，授权码模式认证。功能包括：
 + 用户信息缓存
 + 优雅的封装用户信息并提交给控制器处理
 
+# 授权码模式认证流程
+![流程图](https://github.com/handsomestWei/oauth2-res-sdk/blob/main/design/Oauth2-AuthorizationCode-Flow.png)
+
 # Usage
 
 ## maven依赖
@@ -55,25 +58,31 @@ com.wjy.oauth2.sys-code=appName
 ```
 com.wjy.oauth2.client-ids=clientA|clientB
 ```
+
 ### 过滤器配置
 支持多url拦截，逗号`,`分隔。拦截指定的请求，校验令牌和权限
 ```
 com.wjy.oauth2.filter-order=1
 com.wjy.oauth2.filter-urls=/api/v1/trade/*,/api/v1/help
 ```
+
 ### 令牌和用户信息存储
 支持redis和内存两种方式。默认使用redis
 
 #### redis存储配置
 ```
+// 指定redis存储
 com.wjy.oauth2.store-mode=redis
+// redis连接配置
 com.wjy.oauth2.redis-host-name=xxxx
 com.wjy.oauth2.redis-database-index=5
 com.wjy.oauth2.redis-port=6379
 com.wjy.oauth2.redis-password=xxxx
 ```
+
 #### 内存存储配置
 ```
+// 指定内存存储
 com.wjy.oauth2.store-mode=memory
 // 记录最大条数，超过将清除最旧数据
 com.wjy.oauth2.store-mem-max-size=100000
